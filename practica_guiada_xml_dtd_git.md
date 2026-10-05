@@ -147,9 +147,9 @@ Registre:
 
 | Modificación       | ¿Bien formado? | ¿Válido? | ¿Por qué? |
  |--------------------|----------------|----------|-----------|
- | Cambiar `para`     |                          |   |
-| Cambiar orden      |          |                  | 
-| Agregar `telefono` |     |                      |
+ | Cambiar `para`     | si             | No       |porque el DTD exige <para> y no reconoce <destinatario>
+| Cambiar orden      | si             | No       |El DTD exige una secuencia estricta: (para, de, titulo, contenido) 
+| Agregar `telefono` | Si             | No       |porque el elemento <telefono> no fue declarado en el archivo nota.dtd
 
 Observe los cambios:
 
