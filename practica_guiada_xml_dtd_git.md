@@ -337,15 +337,27 @@ Documente:
 
 Responda:
 
-1.  ¿Cuál es la diferencia entre XML bien formado y XML válido?
-2.  ¿Qué función cumple un DTD?
-3.  ¿Qué diferencia existe entre DTD interno y externo?
+1.  ¿Cuál es la diferencia entre XML bien formado y XML válido? bien formado: cumple las reglas básicas de sintaxis, valido: cumple con la estructura, elementos y reglas definidas en un DTD.
+2.  ¿Qué función cumple un DTD? Define la estructura y las reglas de un documento XML 
+3.  ¿Qué diferencia existe entre DTD interno y externo? Interno: Se define dentro del mismo archivo XML, Externo: Se define en un archivo separado .dtd
 4.  ¿Cómo se expresa cardinalidad en DTD?
+? - Cero o uno (opcional)
+*-Cero o más.
++Uno o más (al menos uno)
+Sin símbolo - Exactamente uno.
+
 5.  ¿Cómo puede restringirse un atributo a determinados valores?
+    Se define una enumeración en la declaración ATTLIST:
+<!ATTLIST elemento atributo (valor1 | valor2) #REQUIRED>
 6.  ¿Qué ventaja proporcionó Git durante las pruebas?
+    Permite realizar modificaciones o pruebas destructivas
 7.  ¿Qué utilidad tuvieron `git diff` y `git restore`?
+    git diff: Muestra en pantalla las líneas exactas que cambiaste o borraste. 
+    git restore: Deshace los cambios no guardados y devuelve el archivo a su estado origina
+
 8.  ¿Qué ventaja proporcionó una rama para desarrollar una solución
     alternativa?
+    Permite desarrollar variantes o características nuevas en un entorno aislado sin alterar ni poner en riesgo la rama principal
 
 ## 12. Estructura final esperada
 
