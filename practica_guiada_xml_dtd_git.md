@@ -183,11 +183,11 @@ Complete la comparación:
 
 | Característica                      | DTD interno | DTD externo |
 |-------------------------------------|-------------|-------------|
-| Ubicación                           |             |             |                                    
-| Reutilizable entre XML              |             |             |            
-| Archivo adicional                   |             |             |                  
-| Conveniente para un único documento |             |             |   
-| Conveniente para muchos documentos  |             |             |   
+| Ubicación                           |Dentro del mismo archivo XML       |   En un archivo .dtd independiente             |                                    
+| Reutilizable entre XML              |No (solo aplica a ese archivo)             | Sí (muchos XML pueden usar el mismo            |            
+| Archivo adicional                   | No requiere archivos extra            |Sí, requiere crear el archivo .dtd             |                  
+| Conveniente para un único documento | Sí (es rápido y todo está en un solo lugar)            |No tan práctico si solo es un archivo             |   
+| Conveniente para muchos documentos  |No (tendrías que duplicar el DTD en cada archivo)|Sí (cambias el .dtd y se actualizan todos los XML)             |   
 
 Registre:
 
@@ -232,9 +232,9 @@ DTD.
 Elimine temporalmente todos los domicilios y registre:
 
 ``` text
-¿XML bien formado? __________
-¿XML válido? _________________
-¿Por qué? ____________________
+¿XML bien formado? si
+¿XML válido? no
+¿Por qué? El DTD define domicilio, exigiendo al menos un subelemento <domicilio> dentro de <domicilios>.
 ```
 
 ## 8. Restricción del atributo `tipo`
@@ -260,11 +260,11 @@ y determine cómo expresar la enumeración.
 Pruebe:
 
  | Caso              | Predicción | Resultado | Explicación |
-|-------------------|------------|-----------|-------------|
- | `tipo="familiar"` |            |           |             |
- | `tipo="habitual"` |            |           |             |
-| `tipo="temporal"` |            |           |             |
-| sin `tipo`        |            |           | 
+|-------------------|-----------|-----------|-------------|
+ | `tipo="familiar"` | Valido    |     Correcto      | Es uno de los valores válidos definidos en la enumeración.            |
+ | `tipo="habitual"` | Valido    |   Correcto        |Es uno de los valores válidos definidos en la enumeración.             |
+| `tipo="temporal"` | invalido  |         Error de validación  | "temporal" no forma parte de los valores permitidos (familiar | habitual).            |
+| sin `tipo`        | invalido  |    Error de validación       |La regla #REQUIRED exige que el atributo tipo esté presente siempre. 
 
 ## 9. Git para desarrollar una variante
 

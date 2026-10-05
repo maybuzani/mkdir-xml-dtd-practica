@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE matricula SYSTEM "matricula.dtd">
+<matricula>
+    <personal>
+        <dni>89383721</dni>
+        <nombre>Sofia Garcia</nombre>
+        <titulacion>Ingenieria de Sistemas</titulacion>
+        <curso_academico>2026-2027</curso_academico>
+        <domicilios>
+            <domicilio tipo="familiar">Calle Paloma 8</domicilio>
+            <domicilio tipo="habitual">Av. Renacimiento 12</domicilio>
+        </domicilios>
+    </personal>
+    <pago>
+        <tipo_matricula>Ordinaria</tipo_matricula>
+    </pago>
+</matricula>
