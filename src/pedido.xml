@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido>
+    <destinatario>Valeria Garcia</destinatario>
+    <articulo>Mouse</articulo>
+    <direccion>
+        <calle>Av. Renacimiento</calle>
+        <numero>66</numero>
+        <piso>1</piso>
+    </direccion>
+    <fecha_entrega>2026-10-05</fecha_entrega>
+</pedido>
