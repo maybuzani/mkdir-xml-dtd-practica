@@ -101,10 +101,10 @@ nota
 
 Responda:
 
-1.  ¿Cuál es el elemento raíz?
-2.  ¿Cuántas veces aparece `para`?
-3.  ¿El orden de los elementos es significativo?
-4.  ¿Los elementos contienen otros elementos o solamente texto?
+1.  ¿Cuál es el elemento raíz? <nota>
+2.  ¿Cuántas veces aparece `para`? 1 vez 
+3.  ¿El orden de los elementos es significativo? si
+4.  ¿Los elementos contienen otros elementos o solamente texto? <nota> contiene otros elementos (para, de, titulo, contenido), y los elementos hijos (para, de, titulo, contenido) contienen solo texto.
 
 Cree `ejercicio2/nota.dtd`. Defina primero:
 
@@ -116,11 +116,11 @@ y después los elementos que contienen texto mediante `#PCDATA`.
 
 | Elemento    | Contenido esperado | Declaración DTD |
 |-------------|--------------------|-----------------|
-| `nota`      | elementos          |        
- | `para`      | texto              |                 |       
- | `de`        | texto              |                 |        
- | `titulo`    | texto              |                 |       
-| `contenido` | texto              |                 |      
+| `nota`      | elementos          | <!ELEMENT nota (para, de, titulo, contenido)>
+ | `para`      | texto              |      <!ELEMENT para (#PCDATA)>           |       
+ | `de`        | texto              |       <!ELEMENT de (#PCDATA)>          |        
+ | `titulo`    | texto              |     <!ELEMENT titulo (#PCDATA)>            |       
+| `contenido` | texto              |     <!ELEMENT contenido (#PCDATA)>            |      
 
 Asocie el DTD mediante:
 
